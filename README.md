@@ -157,25 +157,25 @@ Para suporte, envie um email para [seu-email@exemplo.com](mailto:seu-email@exemp
 
 ## 🗺️ Roadmap
 
-### Q1 2024
+### Q1 2025
 - [x] MVP com suporte a MEXC
 - [x] Sistema de webhook
 - [x] Interface básica
 - [x] Autenticação
 
-### Q2 2024
+### Q2 2025
 - [ ] Suporte a KuCoin
 - [ ] Backtest de estratégias
 - [ ] Notificações
 - [ ] Dashboard avançado
 
-### Q3 2024
+### Q3 2025
 - [ ] Suporte a mais exchanges
 - [ ] Estratégias avançadas
 - [ ] Interface mobile
 - [ ] Análise de performance
 
-### Q4 2024
+### Q4 2025
 - [ ] Machine learning
 - [ ] Social trading
 - [ ] API pública
