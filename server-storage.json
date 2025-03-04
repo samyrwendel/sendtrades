@@ -1,0 +1,46 @@
+{
+  "bots": [
+    {
+      "id": "QT0Z8G6M",
+      "name": "XRPUSDT-BOT01",
+      "enabled": true,
+      "userId": "",
+      "createdAt": "2025-02-10T22:23:38.674Z",
+      "updatedAt": "2025-02-10T23:06:29.427Z",
+      "tradingPair": "XRPUSDT",
+      "exchange": {
+        "name": "MEXC",
+        "config": {
+          "credentials": {
+            "apiKey": "mx0vglw96b9xSBK6th",
+            "secretKey": "7338de0dd3fe425c9340e8bc31d8920a"
+          }
+        }
+      },
+      "webhook": {
+        "enabled": true,
+        "url": "http://192.168.1.33:5173/api/webhook/VETAY9HZ",
+        "maxOrdersPerMinute": 60
+      },
+      "settings": {
+        "maxOrderSize": "0",
+        "minOrderSize": "0",
+        "maxDailyOrders": 100,
+        "tradingEnabled": true,
+        "notifications": {
+          "email": false,
+          "telegram": false
+        }
+      },
+      "statistics": {
+        "totalTrades": 0,
+        "successfulTrades": 0,
+        "failedTrades": 0,
+        "lastTradeAt": null,
+        "profitLoss": "0",
+        "winRate": "0"
+      }
+    }
+  ],
+  "logs": []
+}

@@ -1,0 +1,8 @@
+[2025-02-11T17:24:44.492Z] 🚀 Iniciando teste de login...
+
+[2025-02-11T17:24:44.497Z] 🔄 Testando conexão com o servidor...
+[2025-02-11T17:24:44.526Z] ❌ Erro ao conectar com o servidor:
+{
+  "message": "Request failed with status code 404",
+  "code": "ERR_BAD_REQUEST"
+}

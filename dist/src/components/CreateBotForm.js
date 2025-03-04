@@ -1,0 +1,18 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { useState } from 'react';
+import { useLanguage } from '../hooks/useLanguage';
+export function CreateBotForm({ onSubmit, error }) {
+    const { t } = useLanguage();
+    const [apiKey, setApiKey] = useState('');
+    const [secretKey, setSecretKey] = useState('');
+    const [exchange] = useState('MEXC');
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onSubmit({
+            apiKey,
+            secretKey,
+            exchange
+        });
+    };
+    return (_jsxs("form", { onSubmit: handleSubmit, className: "space-y-4", children: [_jsxs("div", { children: [_jsx("h2", { className: "text-xl font-bold mb-4", children: t.bots.createBot }), _jsxs("div", { className: "mb-4", children: [_jsx("label", { className: "block text-sm font-medium mb-2", children: t.bots.selectExchange }), _jsx("div", { className: "p-4 bg-gray-50 dark:bg-gray-800 rounded-lg", children: _jsxs("div", { className: "flex items-center space-x-3", children: [_jsx("img", { src: "/mexc-logo.png", alt: "MEXC Logo", className: "w-8 h-8" }), _jsx("div", { children: _jsx("div", { className: "font-medium", children: "MEXC" }) })] }) })] }), _jsxs("div", { className: "space-y-4", children: [_jsxs("div", { children: [_jsx("label", { htmlFor: "apiKey", className: "block text-sm font-medium mb-2", children: "API Key" }), _jsx("input", { type: "text", id: "apiKey", value: apiKey, onChange: (e) => setApiKey(e.target.value), className: "w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600", required: true })] }), _jsxs("div", { children: [_jsx("label", { htmlFor: "secretKey", className: "block text-sm font-medium mb-2", children: "Secret Key" }), _jsx("input", { type: "password", id: "secretKey", value: secretKey, onChange: (e) => setSecretKey(e.target.value), className: "w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600", required: true })] })] }), _jsx("p", { className: "text-sm text-gray-500 dark:text-gray-400 mt-4", children: t.bots.apiKeysStoredLocally }), _jsx("p", { className: "text-sm text-gray-500 dark:text-gray-400", children: t.bots.apiKeysPermissions })] }), error && (_jsx("div", { className: "text-red-500 text-sm mt-2", children: error === t.errors.ipNotAuthorized ? (_jsxs("div", { children: [_jsxs("p", { className: "font-medium", children: [t.errors.credentialsValidationError, ":"] }), _jsx("p", { children: error }), _jsxs("p", { className: "mt-2 text-gray-600 dark:text-gray-400", children: [t.common.toResolve, ":"] }), _jsxs("ol", { className: "list-decimal list-inside ml-2 text-gray-600 dark:text-gray-400", children: [_jsx("li", { children: t.common.accessMexcAccount }), _jsx("li", { children: t.common.goToApiManagement }), _jsx("li", { children: t.common.editApiKey }), _jsx("li", { children: t.common.addCurrentIp }), _jsx("li", { children: t.common.waitAndTryAgain })] })] })) : (_jsxs("span", { children: [t.errors.credentialsValidationError, ": ", error] })) })), _jsxs("div", { className: "flex justify-between", children: [_jsx("button", { type: "button", className: "px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-700", onClick: () => window.history.back(), children: t.common.cancel }), _jsx("button", { type: "submit", className: "px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:hover:bg-indigo-500", children: t.bots.validateAndContinue })] })] }));
+}

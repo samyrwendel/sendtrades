@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tema escuro - Dark Mode */
+.dark {
+  /* Backgrounds */
+  --bg-primary: #111827;    /* gray-900 */
+  --bg-secondary: #1F2937;  /* gray-800 */
+  --bg-card: #1F2937;      /* gray-800 */
+  
+  /* Textos */
+  --text-primary: #FFFFFF;   /* white */
+  --text-secondary: #D1D5DB; /* gray-300 */
+  --text-muted: #9CA3AF;     /* gray-400 */
+  
+  /* Bordas */
+  --border-color: #374151;   /* gray-700 */
+  
+  background-color: var(--bg-primary);
+}
+
+/* Tema claro - Light Mode */
+.light {
+  /* Backgrounds */
+  --bg-primary: #FFFFFF;    /* white */
+  --bg-secondary: #F9FAFB;  /* gray-50 */
+  --bg-card: #FFFFFF;      /* white */
+  
+  /* Textos */
+  --text-primary: #111827;   /* gray-900 */
+  --text-secondary: #4B5563; /* gray-600 */
+  --text-muted: #6B7280;     /* gray-500 */
+  
+  /* Bordas */
+  --border-color: #E5E7EB;   /* gray-200 */
+  
+  background-color: var(--bg-primary);
+}
+
+/* Aplicação das cores */
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+}
+
+/* Textos */
+p, span {
+  color: var(--text-secondary);
+}
+
+/* Cards e Containers */
+.card {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--bg-secondary);
+}
+
+/* Elementos específicos */
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* Título específico dos Bots */
+h2.text-xl.font-semibold {
+  color: var(--text-primary);
+}
+
+/* Garantir que o tema claro seja aplicado */
+.light h2.text-xl.font-semibold {
+  color: var(--text-primary) !important;
+}
+
+.light .sidebar {
+  background-color: var(--bg-secondary) !important;
+}
+
+.light .card {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Garantir que o tema escuro seja aplicado */
+.dark h2.text-xl.font-semibold {
+  color: var(--text-primary) !important;
+}
+
+.dark .sidebar {
+  background-color: var(--bg-secondary) !important;
+}
+
+.dark .card {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Estilos específicos */
+.dashboard-title {
+  color: var(--text-primary);
+}
+
+/* Adicionar estas regras */
+.dark h1 {
+  color: white;
+}
+
+/* Ou se precisar ser mais específico */
+.dark .dashboard-title {
+  color: white;
+}
+
+.dashboard-title {
+  color: #FFFFFF !important;
+}
+
+/* Forçar cor branca para títulos específicos no tema escuro */
+.dark .h2.text-xl.font-semibold,
+.dark h2.text-xl.font-semibold {
+  color: #FFFFFF !important;
+}
+
+/* Regra mais específica para o título dos bots */
+.dark div[class*="space-y-6"] h2.text-xl.font-semibold {
+  color: #FFFFFF !important;
+}
+
+/* Garantir que todos os títulos h2 no tema escuro sejam brancos */
+.dark h2 {
+  color: #FFFFFF !important;
+}
+
+/* Regra de fallback */
+.dark .text-xl.font-semibold {
+  color: #FFFFFF !important;
+}
+
+/* Regra com seletor exato */
+.text-xl.font-semibold[role="heading"] {
+  color: #FFFFFF !important;
+}
+
+/* Regra com maior especificidade */
+div:where(.dark) h2.text-xl.font-semibold {
+  color: #FFFFFF !important;
+}
+
+/* Regra com atributos */
+h2[class*="text-xl"][class*="font-semibold"] {
+  color: #FFFFFF !important;
+} 

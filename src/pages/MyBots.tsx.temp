@@ -1,0 +1,57 @@
+import React, { useState, useEffect } from 'react';
+import { Plus, Edit2, Trash2, Play, Pause, RefreshCw, Check, Settings } from 'lucide-react';
+import { useBotStore } from '../lib/botStore';
+import { validateMexcApiKeys } from '../lib/mexcService';
+import { useLanguage } from '../lib/i18n/LanguageContext';
+import { SimplePairSelector } from '../components/SimplePairSelector';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogFooter,
+  DialogTitle,
+  DialogTrigger,
+  DialogDescription,
+} from '@/components/ui/dialog';
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { ExchangeLogo } from '../components/ExchangeLogo';
+import { WebhookInfo } from '../components/WebhookInfo';
+import { Bot } from '../lib/types';
+
+// ... rest of the imports and interfaces ...
+
+export function MyBots() {
+  // ... state and other functions ...
+
+  return (
+    <div className="container mx-auto py-8">
+      {/* ... other JSX ... */}
+      
+      {/* Form section */}
+      <div className="grid grid-cols-4 items-center gap-4">
+        <Label className="text-right">
+          Par de Trading
+        </Label>
+        <div className="col-span-3">
+          <SimplePairSelector
+            onSelect={(pair) => setBotFormData(prev => ({ ...prev, tradingPair: pair.symbol }))}
+          />
+        </div>
+      </div>
+
+      {/* EditBotDialog section */}
+      <div className="grid grid-cols-4 items-center gap-4">
+        <Label className="text-right">
+          {t.trading.pair}
+        </Label>
+        <div className="col-span-3">
+          <SimplePairSelector
+            onSelect={(pair) => updateBotField('tradingPair', pair.symbol)}
+          />
+        </div>
+      </div>
+    </div>
+  );
+} 

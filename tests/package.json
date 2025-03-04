@@ -1,0 +1,14 @@
+{
+  "name": "tradingbot-webhook-tests",
+  "version": "1.0.0",
+  "description": "Testes de webhook para o TradingBot",
+  "main": "testWebhook.ts",
+  "scripts": {
+    "test": "ts-node testWebhook.ts"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+} 

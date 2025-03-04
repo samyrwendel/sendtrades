@@ -1,0 +1,1 @@
+export type BotLogAction = 'buy' | 'sell' | 'system' | 'test'; 

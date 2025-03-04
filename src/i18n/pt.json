@@ -1,0 +1,9 @@
+{
+  "errors": {
+    "failedToLoadLogs": "Falha ao carregar os logs",
+    "failedToClearLogs": "Falha ao limpar os logs"
+  },
+  "success": {
+    "logsCleared": "Logs limpos com sucesso"
+  }
+} 

@@ -1,0 +1,25 @@
+# Teste de COMPRA
+curl -X POST http://localhost:3001/webhook \
+-H "Content-Type: application/json" \
+-d '{
+  "action": "buy",
+  "ticker": "XRPUSDT",
+  "order_size": "100%",
+  "position_size": "0.5",
+  "schema": "2",
+  "timestamp": "2024-03-15T10:00:00Z",
+  "public_id": "PVDYI35A"
+}'
+
+# Teste de VENDA
+curl -X POST http://localhost:3001/webhook \
+-H "Content-Type: application/json" \
+-d '{
+  "action": "sell",
+  "ticker": "XRPUSDT",
+  "order_size": "100%",
+  "position_size": "0.5",
+  "schema": "2",
+  "timestamp": "2024-03-15T10:00:00Z",
+  "public_id": "PVDYI35A"
+}' 
